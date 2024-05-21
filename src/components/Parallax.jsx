@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import mountains from "./mountains.jpg"
-import stars from "./stars.jpeg"
+import mountains from "../assets/mountains.jpg"
+import stars from "../assets/stars.jpeg"
 import {motion,useScroll,useTransform} from "framer-motion"
 
 

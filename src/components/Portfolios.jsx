@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import exampleImage from "./example.jpg";
+import exampleImage from "../assets/example.jpg";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Conatct from "./Conatct";
 const items = [
@@ -95,7 +95,6 @@ const y = useTransform(scrollYProgress,[0,1],[-100,100])
         </div>
       ))}
     </div>
-    <Conatct/>
     </>
 
   );

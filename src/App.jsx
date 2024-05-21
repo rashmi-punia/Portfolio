@@ -1,35 +1,33 @@
 // import Sidebar from './components/Sidebar'
-import Hero from './components/Hero'
-import Parallax from './components/Parallax'
-import Services from './components/Services'
-import Portfolios from './components/Portfolios'
-import Conatct from './components/Conatct'
 
+import Navbar from "./components/Navbar";
+import Home from "./Pages/Home";
+// import resumePDF from "./assets/Resume.pdf"
+import ResumeModal from "./components/ResumeModal";
+import { useState, useRef, useEffect } from "react";
+import Contact from "./Pages/Contact";
 
 function App() {
-  return(
-  <>
-   <div className='*:bg-gradient-to-b from-slate-950 to-slate-800 h-screen *:w-screen *:h-screen'>
-      <section className='overflow-hidden'>
-     
-       <Hero/>
-  
-      </section>
-      <section>
-        <Parallax type="services"/>
-      </section>
-      <section>
-        <Services/>
-      </section>
-      <section>
-        <Portfolios/>
-      </section>
-      <section>
-  <Conatct/>
-      </section>
-    </div>
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [contactModal, setContactModal] = useState(false);
+
+  return (
+    <>
+      <div className="*:w-screen bg-Cora text-pink-900 BodyFont">
+        <Navbar
+          setModalIsOpen={setModalIsOpen}
+          setContactModal={setContactModal}
+        />
+        <Contact
+          contactModal={contactModal}
+          setContactModal={setContactModal}
+        />
+        <Home setContactModal={setContactModal} />
+
+        {modalIsOpen ? <ResumeModal setModalIsOpen={setModalIsOpen} /> : null}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
