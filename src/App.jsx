@@ -1,8 +1,6 @@
-// import Sidebar from './components/Sidebar'
 
 import Navbar from "./components/Navbar";
 import Home from "./Pages/Home";
-// import resumePDF from "./assets/Resume.pdf"
 import ResumeModal from "./components/ResumeModal";
 import { useState, useRef, useEffect } from "react";
 import Contact from "./Pages/Contact";
@@ -13,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="*:w-screen bg-Cora text-pink-900 BodyFont">
+      <div className="*:w-screen  bg-Cora text-pink-900 BodyFont">
         <Navbar
           setModalIsOpen={setModalIsOpen}
           setContactModal={setContactModal}

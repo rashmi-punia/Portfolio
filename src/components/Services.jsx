@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import mountains from "../assets/stars.jpeg";
 import { motion, useInView } from "framer-motion";
+import butterfly from "../assets/butterfly2.jpg"
 const variants = {
   initial: {
     x: -500,
@@ -26,32 +26,31 @@ const Services = () => {
     <>
       <motion.div
         ref={ref}
+        style={{backgroundImage:`url(${butterfly})`, backgroundPosition: "center",  backgroundSize: "cover",backgroundRepeat: "no-repeat"}}
         variants={variants}
         initial="initial"
         animate={IsInView && "animate"}
-        className="mt-16"
+        className="mt-20 w-full relative overflow-hidden h-[92vh]"
       >
-        {/* <motion.div variants={variants} className='fle items-center justify-end text-end'>
-        <p>i focus on helping your brand grow 
-        <br/> and move forward</p>
-        <hr />
-    </motion.div> */}
-        <motion.div variants={variants} className="text-center text-4xl">
-          <h2>About me</h2>
-          {/* <h1>
-        <img src={mountains} className='w-28 border mx-3 inline h-12 rounded-full'/>
-            <motion.b whileHover={{color:"orange"}} >Unique </motion.b>Ideas</h1>
-        <h1><motion.b  whileHover={{color:"orange"}}>For your  </motion.b>Bussiness
-        <button className='subscribe-btn text-black text-2xl mx-3 p-2 rounded-full'>What we do?</button>
-        </h1>     */}
+      <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50"></div>
+      <div className=" mt-2 relative mx-10">
+      <div className="">
+
+        <motion.div variants={variants} className="text-center *:p-4 text-4xl">
+          <h2 className="text-5xl font-semibold bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">About me</h2>
+          <p class="mt-4  text-lg w-[70vw] mx-auto">I'm Rashmi, a creative and results-oriented web developer with a strong passion for crafting engaging and user-friendly experiences. I thrive on translating design concepts into functional and visually appealing websites and applications.</p>
+
         </motion.div>
 
         <motion.div
           variants={variants}
-          className="grid grid-cols-4 mx-12 mt-8 *:border *:p-3"
+          className="grid mx-12 *:bg-Lavender grid-cols-3 *:border *:border-Lavender gap-6 *:p-3"
         >
           <List />
         </motion.div>
+      </div>
+
+      </div>
       </motion.div>
     </>
   );
@@ -60,50 +59,38 @@ const Services = () => {
 function List() {
   return (
     <>
-      <div>
-        <h2 className="text-lg font-semibold my-4">Branding</h2>
-        <p>
-          In this example, we're using the import statement to import an image
-          named example-image.jpg from the same folder as our component. We then
-          use the imported image in the src attribute of an Make sure to include
-          the file extension (e.g., .jpg, .png, .svg) in the file name when
-          you're using the import statement to import an image.
-        </p>
-        <button className="subscribe-btn w-full etxt-black my-4">GO</button>
-      </div>
-      <div>
-        <h2 className="text-lg font-semibold my-4">Branding</h2>
-        <p>
-          In this example, we're using the import statement to import an image
-          named example-image.jpg from the same folder as our component. We then
-          use the imported image in the src attribute of an Make sure to include
-          the file extension (e.g., .jpg, .png, .svg) in the file name when
-          you're using the import statement to import an image.
-        </p>
-        <button className="subscribe-btn w-full etxt-black my-4">GO</button>
-      </div>{" "}
-      <div>
-        <h2 className="text-lg font-semibold my-4">Branding</h2>
-        <p>
-          In this example, we're using the import statement to import an image
-          named example-image.jpg from the same folder as our component. We then
-          use the imported image in the src attribute of an Make sure to include
-          the file extension (e.g., .jpg, .png, .svg) in the file name when
-          you're using the import statement to import an image.
-        </p>
-        <button className="subscribe-btn w-full etxt-black my-4">GO</button>
-      </div>{" "}
-      <div>
-        <h2 className="text-lg font-semibold my-4">Branding</h2>
-        <p>
-          In this example, we're using the import statement to import an image
-          named example-image.jpg from the same folder as our component. We then
-          use the imported image in the src attribute of an Make sure to include
-          the file extension (e.g., .jpg, .png, .svg) in the file name when
-          you're using the import statement to import an image.
-        </p>
-        <button className="subscribe-btn w-full etxt-black my-4">GO</button>
-      </div>
+      <motion.div whileHover={{y:-9,scale:1.01}} className="group relative">
+        <h2 className="text-xl text-center font-semibold my-4">Education</h2>
+        <span className="absolute left-0 bottom-0 top-14 transform origin-center transition-transform scale-x-0 w-full h-1 bg-white group-hover:scale-x-100 duration-300 "></span>
+
+        <div className="px-5">
+        <h3 className="text-lg font-semibold">Maharshi Dayanand University</h3>
+        <h3>Computer Science</h3>
+
+        </div>
+
+       
+        </motion.div>
+      <motion.div whileHover={{y:-9,scale:1.01}}  className="col-span-2 relative group">
+        <div className="text-xl text-center font-semibold my-4 relative">Technical skills</div>
+<span className="absolute left-0 bottom-0 top-14 transform origin-center transition-transform scale-x-0 w-full h-1 bg-white group-hover:scale-x-100 duration-300 "></span>
+        <ul className=" list-disc px-5 *:p-2">
+          <li><span className="font-semibold text-lg capitalize">
+          Front-End development :
+          </span> Adept in HTML, CSS, and JavaScript. Experienced with Tailwind CSS for rapid UI development and React.js for building dynamic user interfaces.</li>
+          <li><span className="font-semibold text-lg capitalize">
+          Animation & motion design :          </span>
+           Leverage Framer Motion to bring interfaces to life with smooth transitions and micro-interactions.
+          </li>
+          <li><span className="font-semibold text-lg capitalize">
+          design tools :
+          </span> canva and Figma for layouts and seamless designing</li>
+          <li><span className="font-semibold text-lg capitalize">
+          version control :
+          </span> Familiar with Git and GitHub for version control </li>
+        </ul>
+       
+      </motion.div>
     </>
   );
 }

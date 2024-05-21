@@ -65,13 +65,15 @@ const Hero = ({setContactModal}) => {
               variants={textvariants}
               className="font-semibold text-4xl capitalize"
             >
-              hellow, i'm Rashmi punia
+              Hi, i'm Rashmi punia
             </motion.h2>
             <motion.h1
               variants={textvariants}
               className="text-2xl tracking-wide"
-            >
-              Frontend Developer
+            >A passionate 
+            <span class="before:block mx-1 hover:before:bg-Coral before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+    <span class="relative text-white"> Frontend Developer</span>
+  </span>
             </motion.h1>
             <motion.h1 variants={textvariants} className="tracking-wide w-96">
               High level experience in web design and development
