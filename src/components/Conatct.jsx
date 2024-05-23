@@ -23,7 +23,7 @@ const variants={
 const Conatct = () => {
   return (
     <>
-    <motion.div className='h-scree text-slate-200 bg-gradient-to-b overflow-hidden *:p-2 flex justify-between items-center' variants={variants} initial="initial" whileInView="animate">
+    <motion.div className=' text-slate-200 bg-gradient-to-b overflow-hidden *:p-2 flex justify-between items-center' variants={variants} initial="initial" whileInView="animate">
         <motion.div variants={variants} className='*:p-3 mx-28'> 
 <motion.h1 variants={variants} className='text-3xl text-wrap font-semibold '>Let's work Together</motion.h1>
 <motion.div variants={variants} className='p-2'>

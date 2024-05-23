@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { animate, motion } from "framer-motion";
 import { GiButterfly } from "react-icons/gi";
-import image from "../assets/coralbg.png";
+// import image from "../assets/coralbg.png";
 import canva from "../assets/canva2.png";
 import { BsFillSendFill } from "react-icons/bs";
 
 
 
 import { IoMdMailUnread } from "react-icons/io";
+import { GlobalContext } from "../Context";
 
 const textvariants = {
   initial: {
@@ -48,14 +49,17 @@ const sliderVariants = {
 };
 
 const Hero = ({setContactModal}) => {
+  const {homeRef } = useContext(GlobalContext);
+
   return (
     <>
       <motion.div
+      ref={homeRef}
         variants={textvariants}
         initial="initial"
         animate="animate"
         className=" h-screen"
-        //   style={{ backgroundImage: `url(${image})`, backgroundSize:"cover", backgroundPosition:"center"}}
+          // style={{ backgroundImage: `url(${image})`, backgroundSize:"cover", backgroundPosition:"center"}}
       >
       
        

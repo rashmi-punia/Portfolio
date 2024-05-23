@@ -14,9 +14,12 @@
         font-optical-sizing: auto;
         font-style: normal;
     }
-    QuotesFont{
+    .QuotesFont{
         font-family: "Great Vibes", cursive;
         font-weight: 400;
         font-style: normal;
+    }
+    .button-to-git{
+        @apply bg-Yellow text-sky-900 QuotesFont p-3 mx-auto block rounded-tl-2xl rounded-br-2xl
     }
 }
