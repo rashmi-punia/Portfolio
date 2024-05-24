@@ -28,10 +28,9 @@ const ResumeModal = ({setModalIsOpen}) => {
   return (
     <>
 
-     <div className='top-0 left-0 bottom-0 w-full h-full z-20 bg-black bg-opacity-45 fixed'>
+     <div className='top-6 left-0 bottom-0 w-full h-full z-20 bg-black bg-opacity-45 fixed'>
       <iframe src={resume} ref={targetRef}   className='w-1/2 h-full py-12 mt-2 z-20 mx-auto block' />
 
-       {/* <button className='text-3xl bg-red-500'>Close Pdf</button> */}
      </div>
       
     </>

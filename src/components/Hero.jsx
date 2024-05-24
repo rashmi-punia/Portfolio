@@ -91,7 +91,7 @@ const Hero = ({setContactModal}) => {
                 variants={textvariants}
                 whileTap={{ scale: 0.94 }}
                 whileHover={{ skew: 6, scale: 1.07 }}
-                className="hover:underline capitalize bg-Mint"
+                className="hover:underline capitalize bg-Mint dark:text-secondaryBg dark:bg-slate-200"
               >
                 see the latest work
               </motion.button>
@@ -100,10 +100,10 @@ const Hero = ({setContactModal}) => {
                 whileTap={{ scale: 0.94 }}
                 whileHover={{ skew: 6, scale: 1.07 }}
                 onClick={()=>setContactModal(true)}
-                className="hover:underline capitalize bg-Lavender"
+                className="hover:underline capitalize bg-Lavender dark:text-secondaryBg dark:bg-slate-200"
               >
                 contact me{" "}
-                <BsFillSendFill className="inline-flex hover:size-5" />
+                <BsFillSendFill className="inline-flex hover:size-5 " />
               </motion.button>
             </motion.div>
             <motion.button
@@ -119,7 +119,7 @@ const Hero = ({setContactModal}) => {
             animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
             className=" h-full w-[50vw] flex justify-center mt-16"
           >
-            <div className="w-[35vw]  rounded-full overflow-hidden mt-12">
+            <div className="w-[35vw] rounded-full overflow-hidden mt-12">
               <img
                 className="object-cover object-center"
                 src={canva}
@@ -132,7 +132,7 @@ const Hero = ({setContactModal}) => {
           variants={sliderVariants}
           initial="initial"
           animate="animate"
-          className="text-9xl text-center w-full font-bold text-nowrap -z-10 opacity-50 mx-2 -mt-32"
+          className="text-9xl text-center w-full font-bold text-nowrap -z-10 opacity-50 dark:opacity-15 mx-2 -mt-32"
         >
           Frontend Developer :
           <span className="text-4xl">

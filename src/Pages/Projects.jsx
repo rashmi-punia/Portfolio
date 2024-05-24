@@ -63,12 +63,12 @@ const Portfolios = () => {
     <>
       <div ref={portfolioRef} className="relaive px-8  py-6">
         <div className="sticky z-30 top-24">
-          <h2 className="text-5xl mb-4 p-3 font-semibold bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
+          <h2 className="text-5xl mb-4 p-3 font-semibold dark:bg-pink-500 bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
             Projects
           </h2>
           <motion.div
             style={{ scaleX }}
-            className="h-2 bg-Lavender rounded-full m-2 mx-12"
+            className="h-2 bg-Lavender dark:bg-slate-200 rounded-full m-2 mx-12"
           ></motion.div>
         </div>
         {items.map((item) => (
@@ -106,7 +106,7 @@ const Portfolios = () => {
                 <h2 className="font-semibold text-xl">{item.name}</h2>
                 <p className="text-wrap">{item.desc}</p>
                 {/* <a>{item.link}</a> */}
-                <a hportfolioRef={item.link} className="button-to-git peer w-fit">
+                <a hportfolioRef={item.link} className="button-to-git dark:bg-orange-400 dark:text-slate-100 peer w-fit">
                   Visit
                 </a>
                 <span className="peer-hover:block hidde w-full bg-black h-34"></span>

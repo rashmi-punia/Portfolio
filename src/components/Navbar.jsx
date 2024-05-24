@@ -9,10 +9,10 @@ const Navbar = ({
   setModalIsOpen,
   setContactModal,
   activeTab,
-  setActiveTab,
+  setActiveTab,toggledarkMode,darkMode
   
 }) => {
-  const { lightMode, setLightMode,aboutRef,portfolioRef,homeRef } = useContext(GlobalContext);
+  const { aboutRef,portfolioRef,homeRef, } = useContext(GlobalContext);
 
   const scrollToDiv = (ref) => {
     if (ref && ref.current) {
@@ -25,7 +25,7 @@ const Navbar = ({
   };
   return (
     <>
-      <div className="fixed QuotesFont shadow bg-white z-50 top-0 left-0 w-full h-20">
+      <div className="fixed QuotesFont dark:bg-accentBg dark:text-pink-50 shadow bg-white z-50 top-0 left-0 w-full h-20">
         <Sidebar />
         <div className="flex justify-between mx-6 items-center h-full space-x-9">
           <div className="ml-16 md:ml-2 text-xl  capitalize">
@@ -40,10 +40,10 @@ const Navbar = ({
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
-              <p class=" relative z-10 group-hover:text-sky-700  ">Home</p>
+              <p class=" relative  z-10 group-hover:text-sky-700  ">Home</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
        {activeTab === "Home" && (
-        <span class="absolute rounded-lg  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+        <span class="absolute rounded-lg dark:hidden   bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
         
        )}      
 
@@ -58,7 +58,7 @@ const Navbar = ({
               <p class=" relative z-10 group-hover:text-sky-700 ">About</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "About" && (
-        <span class="absolute rounded-lg  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+        <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
         
        )} 
             </a>
@@ -70,7 +70,7 @@ const Navbar = ({
               <p class=" relative z-10 group-hover:text-sky-700 ">Projects</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Projects" && (
-        <span class="absolute rounded-lg  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+        <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
         
        )} 
             </a>
@@ -83,7 +83,7 @@ const Navbar = ({
               <p class=" relative z-10 group-hover:text-sky-700 ">Resume</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Resume" && (
-        <span class="absolute rounded-lg  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+        <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
         
        )} 
             </a>
@@ -96,21 +96,21 @@ const Navbar = ({
               <p class=" relative z-10 group-hover:text-sky-700 ">Contact me</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Contact me" && (
-        <span class="absolute rounded-lg  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+        <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
         
        )} 
             </a>
           </div>
           <motion.div className="flex space-x-4 ">
-            {lightMode ? (
-              <IoMoon
-                className="size-7 text-pink-700 hover:text-red-800"
-                onClick={() => setLightMode(false)}
+            {darkMode ? (
+              <MdLightMode
+                className="size-7 dark:hover:text-Yellow  hover:text-red-800"
+                onClick={toggledarkMode}
               />
             ) : (
-              <MdLightMode
-                onClick={() => setLightMode(true)}
-                className="size-7 text-pink-700 hover:text-red-800"
+              <IoMoon
+                onClick={toggledarkMode}
+                className="size-7 dark:hover:text-Yellow hover:text-red-800"
               />
             )}
           </motion.div>

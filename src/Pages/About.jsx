@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { motion, useInView } from "framer-motion";
 import butterfly from "../assets/butterfly2.jpg";
+import darkButterfly from "../assets/darkModeButterfly.jpg"
 import { GlobalContext } from "../Context";
 const variants = {
   initial: {
@@ -19,7 +20,7 @@ const variants = {
   },
 };
 
-const Services = () => {
+const Services = ({darkMode}) => {
   const { lightMode, setLightMode,aboutRef,portfolioRef } = useContext(GlobalContext);
   const IsInView = useInView(aboutRef, { margin: "-100px" });
 
@@ -29,7 +30,7 @@ const Services = () => {
       <motion.div
         ref={aboutRef}
         style={{
-          backgroundImage: `url(${butterfly})`,
+          backgroundImage: `url(${darkMode ? darkButterfly : butterfly})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -39,14 +40,14 @@ const Services = () => {
         animate={IsInView && "animate"}
         className="mt-12  pt-[5rem] w-full relative overflow-hidden h-[95vh]"
       >
-        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-50"></div>
+        <div className="absolute top-0 left-0 w-full h-full dark:hidden bg-white opacity-50"></div>
         <div className=" mt-2 relative mx-10">
           <div className="">
             <motion.div
               variants={variants}
               className="text-center *:p-4 text-4xl"
             >
-              <h2 className="text-5xl font-semibold bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
+              <h2 className="text-5xl font-semibold dark:bg-pink-500 bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
                 About me
               </h2>
               <p class="mt-4  text-lg w-[70vw] mx-auto">
@@ -59,7 +60,7 @@ const Services = () => {
 
             <motion.div
               variants={variants}
-              className="grid mx-12 *:bg-Lavender grid-cols-3 *:border *:border-Lavender gap-6 *:p-3"
+              className="grid mx-12 dark:text-secondaryBg *:dark:bg-primaryText *:bg-Lavender grid-cols-3 *:border *:border-Lavender gap-6 *:p-3"
             >
               <List />
             </motion.div>

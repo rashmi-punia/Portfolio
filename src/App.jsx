@@ -13,17 +13,41 @@ function App() {
   const [contactModal, setContactModal] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
 
+  const [darkMode,setDarkMode] = useState(false)
+
+  useEffect(() => {
+    if(window.matchMedia('(prefers-color-scheme:dark)').matches){
+      setDarkMode(true)
+    }
+    else{
+      setDarkMode(false)
+    }
+
+  },[])
+  useEffect(()=>{
+    if(darkMode){
+      document.documentElement.classList.add("dark")
+
+    }else{
+      document.documentElement.classList.remove("dark")
+    }
+  },[darkMode])
+
+  const toggledarkMode=()=> {
+    setDarkMode(!darkMode)
+  }
+
+console.log(darkMode)
 
   return (
     <>
-      <div className="*:w-screen  selection:bg-Coral selection:text-purple-600 text-pink-900 BodyFont">
+      <div className={` ${darkMode && "dark"} *:w-screen  selection:bg-Coral selection:text-purple-600  dark:bg-accentBg dark:text-primaryText text-pink-900 BodyFont`}>
         <Navbar
           setModalIsOpen={setModalIsOpen}
           setContactModal={setContactModal}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
-          // aboutRef={aboutRef}
-          // portfolioRef={portfolioRef}
+          toggledarkMode={toggledarkMode} darkMode={darkMode} setdarkMode={setDarkMode}
         />
         <Contact
           contactModal={contactModal}
@@ -33,7 +57,7 @@ function App() {
         <Hero setContactModal={setContactModal} />
 
        
-        <Services  />
+        <Services  darkMode={darkMode}/>
         <Portfolios  />
 
         {modalIsOpen ? <ResumeModal setModalIsOpen={setModalIsOpen} /> : null}

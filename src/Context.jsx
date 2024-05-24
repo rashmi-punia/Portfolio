@@ -4,7 +4,6 @@ export const GlobalContext = createContext(null);
 
 
 const GlobalState = ({ children }) => {
-    const [lightMode,setLightMode] = useState(true)
 
     
   const aboutRef = useRef(null);
@@ -15,7 +14,7 @@ const GlobalState = ({ children }) => {
 
     <GlobalContext.Provider
         value={{
-lightMode,setLightMode,aboutRef,portfolioRef
+aboutRef,portfolioRef
         }}>
 {children}
     </GlobalContext.Provider>
