@@ -29,7 +29,7 @@ const Navbar = ({
         <Sidebar />
         <div className="flex justify-between mx-6 items-center h-full space-x-9">
           <div className="ml-16 md:ml-2 text-xl  capitalize">
-            web developer :){" "}
+            web/app developer :) {" "}
           </div>
           <div className=" hidden md:flex space-x-8 ">
             <a
