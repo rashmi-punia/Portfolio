@@ -25,7 +25,7 @@ const Navbar = ({
   };
   return (
     <>
-      <div className="fixed QuotesFont dark:bg-accentBg dark:text-pink-50 shadow bg-white z-50 top-0 left-0 w-full h-20">
+      <div className="fixed dark:bg-accentBg dark:text-pink-50 shadow bg-white z-50 top-0 left-0 w-full h-20">
         <Sidebar />
         <div className="flex justify-between mx-6 items-center h-full space-x-9">
           <div className="ml-16 md:ml-2 text-xl  capitalize">

@@ -41,7 +41,7 @@ console.log(darkMode)
 
   return (
     <>
-      <div className={` ${darkMode && "dark"} *:w-screen  selection:bg-Coral selection:text-purple-600  dark:bg-accentBg dark:text-primaryText text-pink-900 BodyFont`}>
+      <div className={` ${darkMode && "dark"} *:w-screen  selection:bg-Coral selection:text-purple-600  dark:bg-accentBg dark:text-primaryText text-pink-900 latoFont`}>
         <Navbar
           setModalIsOpen={setModalIsOpen}
           setContactModal={setContactModal}

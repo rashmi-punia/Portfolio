@@ -106,7 +106,7 @@ const Portfolios = () => {
                 <h2 className="font-semibold text-xl">{item.name}</h2>
                 <p className="text-wrap">{item.desc}</p>
                 {/* <a>{item.link}</a> */}
-                <a hportfolioRef={item.link} className="button-to-git dark:bg-orange-400 dark:text-slate-100 peer w-fit">
+                <a href={item.link} className="button-to-git dark:bg-orange-400 dark:text-slate-100 peer w-fit">
                   Visit
                 </a>
                 <span className="peer-hover:block hidde w-full bg-black h-34"></span>

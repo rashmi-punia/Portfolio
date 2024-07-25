@@ -22,7 +22,7 @@ export default {
         accentText: '#A0A0A0',
       },
       fontFamily:{
-         
+         Proff:""
       }
     },
   },
