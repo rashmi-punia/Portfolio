@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { motion, useInView } from "framer-motion";
 import butterfly from "../assets/butterfly2.jpg";
-import darkButterfly from "../assets/darkModeButterfly.jpg"
+import darkButterfly from "../assets/darkModeButterfly.jpg";
 import { GlobalContext } from "../Context";
+
 const variants = {
   initial: {
     x: -500,
@@ -20,10 +21,10 @@ const variants = {
   },
 };
 
-const Services = ({darkMode}) => {
-  const { lightMode, setLightMode,aboutRef,portfolioRef } = useContext(GlobalContext);
+const Services = ({ darkMode }) => {
+  const { lightMode, setLightMode, aboutRef, portfolioRef } =
+    useContext(GlobalContext);
   const IsInView = useInView(aboutRef, { margin: "-100px" });
-
 
   return (
     <>
@@ -35,9 +36,9 @@ const Services = ({darkMode}) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        variants={variants}
-        initial="initial"
-        animate={IsInView && "animate"}
+        // variants={variants}
+        // initial="initial"
+        // animate={IsInView && "animate"}
         className="mt-12  pt-[5rem] w-full relative overflow-hidden h-[95vh]"
       >
         <div className="absolute top-0 left-0 w-full h-full dark:hidden bg-white opacity-50"></div>
@@ -75,7 +76,7 @@ function List() {
   return (
     <>
       <motion.div
-        whileHover={{ y: -9, scale: 1.01 }}
+        whileHover={{ y: -5, scale: 1.01 }}
         className="group relative"
       >
         <h2 className="text-xl text-center font-semibold my-4">Education</h2>
@@ -89,7 +90,7 @@ function List() {
         </div>
       </motion.div>
       <motion.div
-        whileHover={{ y: -9, scale: 1.01 }}
+        whileHover={{ y: -5, scale: 1.01 }}
         className="col-span-2 relative group"
       >
         <div className="text-xl text-center font-semibold my-4 relative">

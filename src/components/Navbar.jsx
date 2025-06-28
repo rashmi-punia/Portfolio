@@ -9,10 +9,11 @@ const Navbar = ({
   setModalIsOpen,
   setContactModal,
   activeTab,
-  setActiveTab,toggledarkMode,darkMode
-  
+  setActiveTab,
+  toggledarkMode,
+  darkMode,
 }) => {
-  const { aboutRef,portfolioRef,homeRef, } = useContext(GlobalContext);
+  const { aboutRef, portfolioRef, homeRef } = useContext(GlobalContext);
 
   const scrollToDiv = (ref) => {
     if (ref && ref.current) {
@@ -27,78 +28,77 @@ const Navbar = ({
     <>
       <div className="fixed dark:bg-accentBg dark:text-pink-50 shadow bg-white z-50 top-0 left-0 w-full h-20">
         <Sidebar />
-        <div className="flex justify-between mx-6 items-center h-full space-x-9">
-          <div className="ml-16 md:ml-2 text-xl  capitalize">
-            web/app developer :) {" "}
+        <div className="flex justify-between mx-20 items-center h-full space-x-9">
+          <div className="ml-16 md:ml-2 text-2xl font-semibold capitalize">
+            Rashmi.dev :){" "}
           </div>
           <div className=" hidden md:flex space-x-8 ">
             <a
               href="#"
-              onClick={(e)=>{
-                setActiveTab(e.target.innerText)
-                console.log(activeTab)
+              onClick={(e) => {
+                setActiveTab(e.target.innerText);
+                console.log(activeTab);
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
               <p class=" relative  z-10 group-hover:text-sky-700  ">Home</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
-       {activeTab === "Home" && (
-        <span class="absolute rounded-lg dark:hidden   bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
-        
-       )}      
-
+              {activeTab === "Home" && (
+                <span class="absolute rounded-lg dark:hidden   bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+              )}
             </a>
             <a
               onClick={(e) => {
-                scrollToDiv(aboutRef)
-                setActiveTab(e.target.innerText)
+                scrollToDiv(aboutRef);
+                setActiveTab(e.target.innerText);
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
               <p class=" relative z-10 group-hover:text-sky-700 ">About</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "About" && (
-        <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
-        
-       )} 
+                <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+              )}
             </a>
             <a
-              onClick={(e) => {scrollToDiv(portfolioRef) 
-              setActiveTab(e.target.innerText)}}
+              onClick={(e) => {
+                scrollToDiv(portfolioRef);
+                setActiveTab(e.target.innerText);
+              }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
               <p class=" relative z-10 group-hover:text-sky-700 ">Projects</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Projects" && (
-        <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
-        
-       )} 
+                <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+              )}
             </a>
             <a
-              onClick={(e) => {setModalIsOpen(true)
-              setActiveTab(e.target.innerText)}}
+              onClick={(e) => {
+                setModalIsOpen(true);
+                setActiveTab(e.target.innerText);
+              }}
               // href="#"
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
               <p class=" relative z-10 group-hover:text-sky-700 ">Resume</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Resume" && (
-        <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
-        
-       )} 
+                <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+              )}
             </a>
             <a
-              onClick={(e) =>{ setContactModal(true)
-              setActiveTab(e.target.value)}}
-              
+              onClick={(e) => {
+                setContactModal(true);
+                setActiveTab(e.target.value);
+              }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
               <p class=" relative z-10 group-hover:text-sky-700 ">Contact me</p>
               <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Contact me" && (
-        <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
-        
-       )} 
+                <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+              )}
             </a>
           </div>
           <motion.div className="flex space-x-4 ">

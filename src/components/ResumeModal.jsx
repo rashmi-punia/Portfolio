@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react'
 // import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 // import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 // Modal.setAppElement('#root'); // Set the root element for accessibility
-import resume from "../assets/Resume.pdf"
+import resume from "../assets/Resume_final.pdf"
 
 
 const ResumeModal = ({setModalIsOpen}) => {

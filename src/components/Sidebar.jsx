@@ -51,22 +51,27 @@ const Sidebar = () => {
 
   return (
     <>
-      <motion.div animate={open ? "open" : "closed"} initial="closed" variants={variants}
-      className="block md:hidden">
+      <motion.div
+        animate={open ? "open" : "closed"}
+        initial="closed"
+        variants={variants}
+        className="block md:hidden"
+      >
         <motion.div
           variants={variants}
           className="fixed  z-10 top-0 bottom-0 left-0 w-1/4 bg-sky-200 overflow-hidden"
         >
-          <motion.div 
-          variants={listVariants} 
-           className="my-24 flex-col">
+          <motion.div variants={listVariants} className="my-24 flex-col">
             {Links.map((link, i) => (
               <motion.a
                 href="`#${i}`"
                 variants={ItemVariants}
-                whileHover={{ scale: 1.1, textDecoration:"underline", backgroundColor:"plum" }}
+                whileHover={{
+                  scale: 1.1,
+                  textDecoration: "underline",
+                  backgroundColor: "plum",
+                }}
                 whileTap={{ scale: 0.95 }}
-                // whileFocus={{backgroundColor:"yellow"}}
                 className=" w-full block mt-2 py-2 px-6"
                 id={i}
               >
