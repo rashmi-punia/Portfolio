@@ -8,7 +8,7 @@ import { PiNutFill } from "react-icons/pi";
 import Projects from "./Pages/Projects";
 
 function App() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
   const [contactModal, setContactModal] = useState(false);
   const [activeTab, setActiveTab] = useState("Home");
 
@@ -27,7 +27,6 @@ function App() {
     setDarkMode(!darkMode);
   };
 
-  // console.log(darkMode);
 
   return (
     <>
@@ -37,7 +36,7 @@ function App() {
         } px-20  selection:bg-Coral selection:text-purple-600  dark:bg-accentBg dark:text-primaryText text-pink-900 latoFont`}
       >
         <Navbar
-          setModalIsOpen={setModalIsOpen}
+          setResumeModalOpen={setResumeModalOpen}
           setContactModal={setContactModal}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
@@ -55,7 +54,7 @@ function App() {
         <Services darkMode={darkMode} />
         <Projects />
 
-        {modalIsOpen ? <ResumeModal setModalIsOpen={setModalIsOpen} /> : null}
+        {resumeModalOpen ? <ResumeModal setResumeModalOpen={setResumeModalOpen} /> : null}
       </section>
     </>
   );

@@ -31,7 +31,7 @@ const Services = ({ darkMode }) => {
       <motion.div
         ref={aboutRef}
         style={{
-          backgroundImage: `url(${darkMode ? darkButterfly : butterfly})`,
+          backgroundImage: `url(${!darkMode  && butterfly})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -48,10 +48,10 @@ const Services = ({ darkMode }) => {
               variants={variants}
               className="text-center *:p-4 text-4xl"
             >
-              <h2 className="text-5xl font-semibold dark:bg-pink-500 bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
+              <h2 className="text-5xl font-semibold dark:bg-transparent bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
                 About me
               </h2>
-              <p class="mt-4  text-lg w-[70vw] mx-auto">
+              <p class=" text-slate-300 mb-6  text-lg w-[70vw] mx-auto">
                 I'm Rashmi, a creative and results-oriented web developer with a
                 strong passion for crafting engaging and user-friendly
                 experiences. I thrive on translating design concepts into
@@ -61,7 +61,7 @@ const Services = ({ darkMode }) => {
 
             <motion.div
               variants={variants}
-              className="grid mx-12 dark:text-secondaryBg *:dark:bg-primaryText *:bg-Lavender grid-cols-3 *:border *:border-Lavender gap-6 *:p-3"
+              className="grid mx-12 dark:text-slate-200 *:dark:bg-zinc-60 *:dark:bg-gradient-to-b dark:from-zinc-700 dark:to-pink-500 *:bg-Lavender grid-cols-3 *:border *:border-Lavender gap-6 *:p-3"
             >
               <List />
             </motion.div>

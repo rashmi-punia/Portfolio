@@ -81,23 +81,23 @@ const Hero = ({ setContactModal }) => {
             </motion.h1>
             <motion.div
               variants={textvariants}
-              className=" *:border *:border-pink-80 *:my-4 space-x-5 *:rounded-lg  *:p-2"
+              className="*:my-4 space-x-5 *:rounded-lg  *:py-2.5 *:px-3"
             >
               <motion.a
                 href="#projects"
                 variants={textvariants}
                 whileTap={{ scale: 0.94 }}
-                whileHover={{ scale: 1.02 }}
-                className=" capitalize bg-Mint dark:text-secondaryBg dark:bg-slate-200"
+                whileHover={{ scale: 1.04 }}
+                className=" capitalize bg-Mint dark:text-accentBg dark:bg-slate-200"
               >
                 see the latest work
               </motion.a>
               <motion.button
                 variants={textvariants}
                 whileTap={{ scale: 0.94 }}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.04 }}
                 onClick={() => setContactModal(true)}
-                className=" capitalize bg-Lavender dark:text-secondaryBg dark:bg-slate-200"
+                className=" capitalize bg-Lavender dark:bg-slate-500 dark:text-white "
               >
                 contact me{" "}
                 <BsFillSendFill className="inline-flex hover:size-5 " />
@@ -129,7 +129,7 @@ const Hero = ({ setContactModal }) => {
           variants={sliderVariants}
           initial="initial"
           animate="animate"
-          className="text-9xl text-center w-full font-bold text-nowrap -z-10 opacity-50 dark:opacity-15 mx-2 -mt-32"
+          className="text-9xl text-center w-full font-bold text-nowrap -z-10 opacity-50 dark:opacity-25 mx-2 -mt-32"
         >
           Web Developer :
           <span className="text-4xl">

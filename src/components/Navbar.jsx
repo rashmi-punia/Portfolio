@@ -6,7 +6,7 @@ import { MdLightMode } from "react-icons/md";
 import { GlobalContext } from "../Context";
 
 const Navbar = ({
-  setModalIsOpen,
+  setResumeModalOpen,
   setContactModal,
   activeTab,
   setActiveTab,
@@ -41,8 +41,10 @@ const Navbar = ({
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
-              <p class=" relative  z-10 group-hover:text-sky-700  ">Home</p>
-              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <p class=" relative  z-10 group-hover:text-sky-700 dark:group-hover:text-accentBg  ">
+                Home
+              </p>
+              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r dark:bg-Lavender from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Home" && (
                 <span class="absolute rounded-lg dark:hidden   bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
               )}
@@ -54,10 +56,12 @@ const Navbar = ({
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
-              <p class=" relative z-10 group-hover:text-sky-700 ">About</p>
-              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <p class=" relative z-10 group-hover:text-sky-700 dark:group-hover:text-accentBg ">
+                About
+              </p>
+              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r dark:bg-Lavender from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "About" && (
-                <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+                <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
               )}
             </a>
             <a
@@ -67,22 +71,26 @@ const Navbar = ({
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
-              <p class=" relative z-10 group-hover:text-sky-700 ">Projects</p>
-              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <p class=" relative z-10 group-hover:text-sky-700 dark:group-hover:text-accentBg ">
+                Projects
+              </p>
+              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r dark:bg-Lavender from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Projects" && (
-                <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
+                <span class="absolute rounded-lg dark:hidden bottom-0 left-0 w-full h-full bg-gradient-to-r  from-Mint to-Lavender"></span>
               )}
             </a>
             <a
               onClick={(e) => {
-                setModalIsOpen(true);
+                setResumeModalOpen(true);
                 setActiveTab(e.target.innerText);
               }}
               // href="#"
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
-              <p class=" relative z-10 group-hover:text-sky-700 ">Resume</p>
-              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <p class=" relative z-10 group-hover:text-sky-700 dark:group-hover:text-accentBg ">
+                Resume
+              </p>
+              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r dark:bg-Lavender from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Resume" && (
                 <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
               )}
@@ -94,8 +102,10 @@ const Navbar = ({
               }}
               class="relative block p-3 capitalize group hover:rounded-xl overflow-hidden"
             >
-              <p class=" relative z-10 group-hover:text-sky-700 ">Contact me</p>
-              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+              <p class=" relative z-10 group-hover:text-sky-700 dark:group-hover:text-accentBg ">
+                Contact me
+              </p>
+              <span class="absolute  bottom-0 left-0 w-full h-full bg-gradient-to-r dark:bg-Lavender from-Mint to-Lavender transform scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
               {activeTab === "Contact me" && (
                 <span class="absolute rounded-lg dark:hidden  bottom-0 left-0 w-full h-full bg-gradient-to-r from-Mint to-Lavender"></span>
               )}

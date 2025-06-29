@@ -26,12 +26,12 @@ const Projects = () => {
       <section id="projects" ref={portfolioRef} className="relaive px-8  py-6">
         {/* //TOP FIXED */}
         <div className="sticky bg-white py-3 dark:bg-accentBg z-30 top-20">
-          <h2 className="text-5xl mb-4 p-3 font-semibold dark:bg-pink-500 bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
+          <h2 className="text-5xl mb-4 p-3 font-semibold dark:bg-transparent bg-Pink rounded-xl hover:bg-Lavender text-white mx-auto w-fit">
             Projects
           </h2>
           <motion.div
             style={{ scaleX }}
-            className="h-2 bg-Lavender dark:bg-slate-200 rounded-full m-2 mx-12"
+            className="h-2 bg-Lavender dark:bg-slate-500 rounded-full m-2 mx-12"
           ></motion.div>
         </div>
 
@@ -50,7 +50,7 @@ const Projects = () => {
                     duration: 2,
                   },
                 }}
-                className="max-w-[32vw] p-2 h-[30vh] *:rounded-xl"
+                className="max-w-[32vw] p-2 h-[50vh] overflow-hidden *:rounded-xl"
               >
                 <img
                   className="object-cover  object-center"
@@ -105,7 +105,7 @@ const Projects = () => {
 
                 <a
                   href={item.githubLink}
-                  className="flex button-to-git dark:bg-orange-400 dark:text-slate-100 w-fit"
+                  className="flex p-3 gap-1 dark:hover:bg-slate-600 rounded bg-pink-400 text-white mx-auto items-center justify-center dark:bg-zinc-600 dark:text-slate-100 w-[120px]"
                 >
                   <span>Visit</span> <FiGithub />
                 </a>
